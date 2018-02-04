@@ -9,23 +9,45 @@ import {
 } from 'react-native';
 
 export default class Todo extends Component{
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     lists:[
+  //       {key: 'Book a Movie Ticket'},
+  //       {key: 'Submit the Assignment'},
+  //       {key: 'Pay the Electricity Bill'},
+  //       {key: 'Meeting with Kannan'},
+  //       {key: 'Buy a Noodles for Dinner'},
+  //       {key: 'Start to learn VR'},
+  //       {key: 'Buy groceries'},
+  //       {key: 'Upload photos'},
+  //       {key: 'Make a plan next week trip'},
+  //       {key: 'Fill up the tank'},
+  //       {key: 'Swimming on weekend'}
+  //     ]
+  //   }
+  // }
+  //
+  // componentWillReceiveProps(nextProps) {
+  //   console.log("nmmnmnnm",nextProps);
+  //   let context = this;
+  //   let dataToAdded = [];
+  //   dataToAdded.push(this.state.lists)
+  //   console.log("dffsdfddfd",dataToAdded);
+  //   if(this.props.dataAdded){
+  //     dataToAdded.push(nextProps.dataAdded)
+  //     console.log("dff",dataToAdded);
+  //   }
+  //   this.setState({
+  //     lists:dataToAdded
+  //   })
+  // }
+
   render(){
     return(
       <View style= {styles.bodyContainer}>
         <FlatList
-        data={[
-          {key: 'Book a Movie Ticket'},
-          {key: 'Submit the Assignment'},
-          {key: 'Pay the Electricity Bill'},
-          {key: 'Meeting with Kannan'},
-          {key: 'Buy a Noodles for Dinner'},
-          {key: 'Start to learn VR'},
-          {key: 'Buy groceries'},
-          {key: 'Upload photos'},
-          {key: 'Make a plan next week trip'},
-          {key: 'Fill up the tank'},
-          {key: 'Swimming on weekend'}
-        ]}
+        data={this.props.lists}
         renderItem={
                   ( {item} ) =>
                   <TouchableOpacity>
