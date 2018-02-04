@@ -7,13 +7,15 @@ import {
   TouchableOpacity,
   Button
 } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default class FloatingActionButton extends Component{
   render(){
     return(
       <View>
         <TouchableOpacity style={styles.addButton}>
-          <Text style={styles.addButtonText}>+</Text>
+          <Icon style={styles.navIcon} name="add" size={24}/>
+          {/* <Text style={styles.addButtonText}>+</Text> */}
         </TouchableOpacity>
       </View>
     );
@@ -35,9 +37,12 @@ const styles = StyleSheet.create({
     position:'absolute',
     // zIndex:11
   },
-  addButtonText :{
+  navIcon : {
     color:'white',
-    fontSize:24,
-
-    }
+  }
+  // addButtonText :{
+  //   color:'white',
+  //   fontSize:24,
+  //
+  //   }
 });
