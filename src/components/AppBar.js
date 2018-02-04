@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
   Text,
   View,
@@ -8,13 +7,12 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-
 export default class AppBar extends Component{
   render(){
     return(
       <View style={styles.header}>
         <View style={styles.leftNav}>
-          <TouchableOpacity><Icon style={styles.navIcon} name="menu" size={24}/></TouchableOpacity>
+          <TouchableOpacity ><Icon style={styles.navIcon} name="menu" size={24}/></TouchableOpacity>
           <Text style={styles.headerText}> Todo </Text>
         </View>
         <View style={styles.rightNav}>
@@ -41,8 +39,7 @@ const styles = StyleSheet.create({
     fontSize:20,
     fontWeight:'bold',
     alignSelf:'center',
-    paddingHorizontal:16
-
+    paddingHorizontal:16,
   },
   leftNav :{
     flexDirection:'row',
@@ -53,7 +50,5 @@ const styles = StyleSheet.create({
   navIcon:{
     padding:16,
     color:'hsla(0, 0%, 0%, 0.54)',
-
-
   }
 });

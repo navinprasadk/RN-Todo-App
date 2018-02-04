@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
@@ -15,6 +9,7 @@ import AppBar from './src/components/AppBar.js';
 import FloatingActionButton from './src/components/FloatingActionButton.js';
 import ToDo from './src/components/ToDo.js';
 // import Button from './src/components/Button.js';
+import SplashScreen from 'react-native-splash-screen';
 
 // const instructions = Platform.select({
 //   ios: 'Press Cmd+R to reload,\n' +
@@ -56,7 +51,13 @@ export default class App extends Component<{}> {
     console.log("ewrett222",this.state.lists);
   }
 
+  componentDidMount() {
+   // do stuff while splash screen is shown
+     // After having done stuff (such as async tasks) hide the splash screen
+     SplashScreen.hide();
+  }
   render() {
+
     return (
       <View style={styles.container}>
         <AppBar/>

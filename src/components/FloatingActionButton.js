@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import Modal from 'react-native-modal';
 import ToDo from './ToDo.js';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default class FloatingActionButton extends Component{
   constructor() {
@@ -58,7 +59,8 @@ export default class FloatingActionButton extends Component{
     return(
       <View>
         <TouchableOpacity style={styles.addButton} onPress={this.handleAdd.bind(this)}>
-          <Text style={styles.addButtonText}>+</Text>
+          <Icon style={styles.navIcon} name="add" size={24}/>
+          {/* <Text style={styles.addButtonText}>+</Text> */}
         </TouchableOpacity>
         <Modal
           isVisible={this.state.modal}
@@ -114,4 +116,12 @@ const styles = StyleSheet.create({
       borderColor: 'black',
       backgroundColor: 'green'
    }
+  navIcon : {
+    color:'white',
+  }
+  // addButtonText :{
+  //   color:'white',
+  //   fontSize:24,
+  //
+  //   }
 });
