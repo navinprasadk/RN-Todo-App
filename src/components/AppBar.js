@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#E91E63',
   },
   headerText :{
-    color:'white',
+    color:'#FCE4EC',
     fontSize:20,
     fontWeight:'bold',
     alignSelf:'center',
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
   },
   navIcon:{
     padding:16,
-    color:'hsla(0, 0%, 0%, 0.54)',
+    // color:'hsla(0, 0%, 0%, 0.54)',
+    color:'#FCE4EC',
   }
 });

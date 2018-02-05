@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     // zIndex:11
   },
   navIcon : {
-    color:'white',
+    color:'#FCE4EC',
   }
   // addButtonText :{
   //   color:'white',

@@ -3,7 +3,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  StatusBar
 } from 'react-native';
 import AppBar from './src/components/AppBar.js';
 import FloatingActionButton from './src/components/FloatingActionButton.js';
@@ -28,6 +29,7 @@ export default class App extends Component<{}> {
 
     return (
       <View style={styles.container}>
+        <StatusBar  backgroundColor="#C2185B" barStyle="light-content" hidden = {false}/>
         <AppBar/>
         <ToDo/>
         <FloatingActionButton/>
