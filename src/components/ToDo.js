@@ -10,45 +10,30 @@ import {
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default class Todo extends Component{
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     lists:[
-  //       {key: 'Book a Movie Ticket'},
-  //       {key: 'Submit the Assignment'},
-  //       {key: 'Pay the Electricity Bill'},
-  //       {key: 'Meeting with Kannan'},
-  //       {key: 'Buy a Noodles for Dinner'},
-  //       {key: 'Start to learn VR'},
-  //       {key: 'Buy groceries'},
-  //       {key: 'Upload photos'},
-  //       {key: 'Make a plan next week trip'},
-  //       {key: 'Fill up the tank'},
-  //       {key: 'Swimming on weekend'}
-  //     ]
-  //   }
-  // }
-  //
-  // componentWillReceiveProps(nextProps) {
-  //   console.log("nmmnmnnm",nextProps);
-  //   let context = this;
-  //   let dataToAdded = [];
-  //   dataToAdded.push(this.state.lists)
-  //   console.log("dffsdfddfd",dataToAdded);
-  //   if(this.props.dataAdded){
-  //     dataToAdded.push(nextProps.dataAdded)
-  //     console.log("dff",dataToAdded);
-  //   }
-  //   this.setState({
-  //     lists:dataToAdded
-  //   })
-  // }
+  constructor() {
+    super();
+    this.state = {
+      lists:[
+        {key: 'Book a Movie Ticket'},
+        {key: 'Submit the Assignment'},
+        {key: 'Pay the Electricity Bill'},
+        {key: 'Meeting with Kannan'},
+        {key: 'Buy a Noodles for Dinner'},
+        {key: 'Start to learn VR'},
+        {key: 'Buy groceries'},
+        {key: 'Upload photos'},
+        {key: 'Make a plan next week trip'},
+        {key: 'Fill up the tank'},
+        {key: 'Swimming on weekend'}
+      ]
+    }
+  }
 
   render(){
     return(
       <View style= {styles.bodyContainer}>
         <FlatList
-        data={this.props.lists}
+        data={this.state.lists}
         renderItem={
                   ( {item} ) =>
                     <View style={styles.boxContainer}>

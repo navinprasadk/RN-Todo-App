@@ -20,37 +20,6 @@ import SplashScreen from 'react-native-splash-screen';
 // });
 
 export default class App extends Component<{}> {
-  constructor() {
-    super();
-    this.state = {
-      lists:[
-        {key: 'Book a Movie Ticket'},
-        {key: 'Submit the Assignment'},
-        {key: 'Pay the Electricity Bill'},
-        {key: 'Meeting with Kannan'},
-        {key: 'Buy a Noodles for Dinner'},
-        {key: 'Start to learn VR'},
-        {key: 'Buy groceries'},
-        {key: 'Upload photos'},
-        {key: 'Make a plan next week trip'},
-        {key: 'Fill up the tank'},
-        {key: 'Swimming on weekend'}
-      ]
-    }
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleSubmit(dataAdded) {
-    console.log("ewrett",dataAdded);
-    this.state.lists.push({
-      key:dataAdded.key
-    })
-    console.log("ewrett",this.state.lists);
-    this.setState({
-      lists:this.state.lists
-    })
-    console.log("ewrett222",this.state.lists);
-  }
 
   componentDidMount() {
    // do stuff while splash screen is shown
@@ -58,13 +27,12 @@ export default class App extends Component<{}> {
      SplashScreen.hide();
   }
   render() {
-
     return (
       <View style={styles.container}>
         <StatusBar  backgroundColor="#C2185B" barStyle="light-content" hidden = {false}/>
         <AppBar/>
-        <ToDo lists={this.state.lists}/>
-        <FloatingActionButton handleDataSubmit={this.handleSubmit.bind(this)}/>
+        <ToDo />
+        <FloatingActionButton/>
       </View>
       // <View style={styles.container}>
       //   <Text style={styles.welcome}>
